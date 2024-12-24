@@ -1,0 +1,38 @@
+<app-header />
+<main>
+  <div id="dashboard">
+    <div class="dashboard-item">
+      <app-server-status />
+    </div>
+
+    <div class="dashboard-item">
+      <article>
+        <header>
+          <img src="globe.png" alt="A globe" />
+          <h2>Tráfego</h2>
+        </header>
+        <div id="traffic">
+          <p>Últimos 7 dias</p>
+
+          <div id="chart">
+            @for (dataPoint of dummyTrafficData; track dataPoint.id) {
+              <div [style.height]="(dataPoint.value / maxTraffic) * 100 + '%'"></div>
+            }
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <div class="dashboard-item">
+      <article>
+        <header>
+          <img src="list.png" alt="A list of items" />
+          <h2>Tíquetes de suporte</h2>
+        </header>
+        <div id="status">
+          <p>Todo...</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</main>
