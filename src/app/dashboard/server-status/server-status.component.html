@@ -1,18 +1,13 @@
-<article>
-  <header>
-    <img src="status.png" alt="A signal symbol" />
-    <h2>Status do Servidor</h2>
-  </header>
-  <div>
-    @if (currentStatus === 'online') {
-      <p>Os servidores estão online</p>
-      <p>Todos os sistemas estão operacionais.</p>
-    } @else if (currentStatus === 'offline') {
-      <p>Os servidores estão off-line</p>
-      <p>A funcionalidade deve ser restaurada em breve.</p>
-    } @else {
-      <p>O status do servidor é desconhecido</p>
-      <p>Falha ao buscar o status do servidor.</p>
-    }
-  </div>
-</article>
+<div>
+  @if (currentStatus === 'online') {
+  <p>Os servidores estão online</p>
+  <p>Todos os sistemas estão operacionais.</p>
+  } @else if (currentStatus === 'offline') {
+  <p>Os servidores estão off-line</p>
+  <p>A funcionalidade deve ser restaurada em breve.</p>
+  } @else {
+  <p>O status do servidor é desconhecido</p>
+  <p>Falha ao buscar o status do servidor.</p>
+  }
+</div>
+
